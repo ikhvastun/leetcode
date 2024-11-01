@@ -52,9 +52,24 @@ class Solution:
         return res.next
 
 
-# l1 = ListNode(1, ListNode(6, ListNode(3)))
-# l2 = ListNode(2, ListNode(8, ListNode(9)))
-# sol = Solution()
-# print(sol.addTwoNumbers(l1, l2))
+def lst2link(lst):
+    cur = dummy = ListNode(0)
+    for e in lst:
+        cur.next = ListNode(e)
+        cur = cur.next
+    return dummy.next
 
-        
+
+if __name__ == "__main__":
+    sol = Solution()
+    first = [1, 2, 3]
+    second = [1, 2, 3, 4]
+    l1 = lst2link(first)
+    l2 = lst2link(second)
+
+    added = sol.addTwoNumbers(l1, l2)
+
+    while added:
+        print(added.val, end="")
+        added = added.next
+    print()      
