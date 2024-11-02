@@ -1,5 +1,5 @@
 import unittest
-from main import Solution  # Assuming your code is in 'main.py'
+from main import Solution 
 
 class TestMedianSortedArrays(unittest.TestCase):
 
